@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Post Search
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h1> BLog Search Engine </h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_table}}
+        <input type="submit" value="Search">
+    </form>
+</div>
+{% endblock %}

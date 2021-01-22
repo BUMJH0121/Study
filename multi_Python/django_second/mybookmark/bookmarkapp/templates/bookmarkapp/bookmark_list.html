@@ -7,6 +7,7 @@
 <div id="content">
     <h1>Bookmark List</h1>
     <ul>
+    {{vars}}
         {% for bookmark in object_list %}
             <li><a href="{% url 'detail' bookmark.id %}" target='_blank'>{{bookmark}}</a></li>
         {% endfor %}
