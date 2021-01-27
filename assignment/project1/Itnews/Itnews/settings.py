@@ -62,9 +62,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Itnews.pipelines.ItnewsPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'Itnews.pipelines.ItnewsPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -87,6 +87,6 @@ ROBOTSTXT_OBEY = False
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-FEED_EXPORT_ENCODING = 'utf-88-sig'
-FEED_URI = "Itnews.csv"
-FEED_FORMAT = "csv"
+FEED_EXPORT_ENCODING = 'utf-8'
+# FEED_URI = "Itnews.csv"
+# FEED_FORMAT = "csv"

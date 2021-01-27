@@ -9,7 +9,7 @@ import scrapy
 class ItnewsItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    kind = scrapy.Field()
     title = scrapy.Field()
     display = scrapy.Field()
     author = scrapy.Field()
-    upload_time = scrapy.Field()

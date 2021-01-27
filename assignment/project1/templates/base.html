@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <title>{% block title %}project1{% endblock %}</title>
+
+        <!-- {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'css/base.css' %}{% endblock %}" />
+        <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" /> -->
+
+    </head>
+
+    <body>
+
+        <div id="header">
+            <h2 class="maintitle">first project</h2>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="{% url 'news:it'%}">ItNews</a></li>
+                <li><a href="{% url 'news:sport'%}">SportNews</a></li>
+                <li><a href="{% url 'news:economy'%}">EconomyNews</a></li>
+            </ul>
+        </div>
+        {% block content %}{% endblock %}
+        
+
+        {% block footer %}{% endblock %}
+
+    </body>
+
+</html>

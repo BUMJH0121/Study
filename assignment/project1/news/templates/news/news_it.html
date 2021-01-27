@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}ItNews{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h2>ItNews</h2>
+    <form action = "TakeItnews" method="GET">
+        <button>최신데이터 가져오기</button>
+    </form>
+    
+
+    <!-- previous or next post link -->
+    <!-- <p class="other_posts">
+        <a href="{{ object.get_previous_post.get_absolute_url }}">
+            {{ object.get_previous_post }}
+        </a>
+        |
+        <a href="{{ object.get_next_post.get_absolute_url }}">
+            {{ object.get_next_post }}
+        </a>
+    </p> -->
+</div>
+{% endblock %}
