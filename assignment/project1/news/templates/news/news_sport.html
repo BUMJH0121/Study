@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}SportNews{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h2>SportNews</h2>
+    <form action = "" method="GET">
+        {% csrf_token %}
+        <input type="hidden" name="kind" value="SPORT">
+        <input type="submit" value="최신 데이터 가져오기">
+    </form>
+    {% if News %}
+        {% for news in News %}
+        <h3>{{news.title}}</h3>
+        <h5>{{news.display}}</h5>
+        {% endfor %}
+    {% endif %}
+
+    <!-- previous or next post link -->
+    <!-- <p class="other_posts">
+        <a href="{{ object.get_previous_post.get_absolute_url }}">
+            {{ object.get_previous_post }}
+        </a>
+        |
+        <a href="{{ object.get_next_post.get_absolute_url }}">
+            {{ object.get_next_post }}
+        </a>
+    </p> -->
+</div>
+{% endblock %}

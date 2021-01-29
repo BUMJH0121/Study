@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Weather{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h2>Weather</h2>
+    <form action = "" method="GET">
+        {% csrf_token %}
+        <label for="city">Enter city(english):</label>
+        <input type="text" id="city" name="city">
+        <input type="submit" value="날씨 검색">
+    </form>
+    <h3>이름 : {{weather.name}}</h3>
+    <h3>날씨 : {{weather.weather.0.description}}</h3>
+    <h3>온도 : {{weather.main.temp}}</h3>
+    <h3>풍속 : {{weather.wind.speed}}</h3>
+    
+
+    <!-- previous or next post link -->
+    <!-- <p class="other_posts">
+        <a href="{{ object.get_previous_post.get_absolute_url }}">
+            {{ object.get_previous_post }}
+        </a>
+        |
+        <a href="{{ object.get_next_post.get_absolute_url }}">
+            {{ object.get_next_post }}
+        </a>
+    </p> -->
+</div>
+{% endblock %}

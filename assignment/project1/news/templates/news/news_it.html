@@ -5,10 +5,17 @@
 {% block content %}
 <div id="content">
     <h2>ItNews</h2>
-    <form action = "TakeItnews" method="GET">
-        <button>최신데이터 가져오기</button>
+    <form action = "" method="GET">
+        {% csrf_token %}
+        <input type="hidden" name="kind" value="IT">
+        <input type="submit" value="최신 데이터 가져오기">
     </form>
-    
+    {% if News %}
+        {% for news in News %}
+        <h3>{{news.title}}</h3>
+        <h5>{{news.display}}</h5>
+        {% endfor %}
+    {% endif %}
 
     <!-- previous or next post link -->
     <!-- <p class="other_posts">

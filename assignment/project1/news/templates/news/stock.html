@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}SportNews{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h2>Stock</h2>
+    <form action = "" method="GET">
+        {% csrf_token %}
+        <input type="text" name="name" id="name">
+        <input type="submit" value="정보 가져오기">
+    </form>
+
+    <h2>{{stock}}</h2>
+    <!-- previous or next post link -->
+    <!-- <p class="other_posts">
+        <a href="{{ object.get_previous_post.get_absolute_url }}">
+            {{ object.get_previous_post }}
+        </a>
+        |
+        <a href="{{ object.get_next_post.get_absolute_url }}">
+            {{ object.get_next_post }}
+        </a>
+    </p> -->
+</div>
+{% endblock %}

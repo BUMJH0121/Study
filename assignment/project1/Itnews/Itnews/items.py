@@ -13,3 +13,9 @@ class ItnewsItem(scrapy.Item):
     title = scrapy.Field()
     display = scrapy.Field()
     author = scrapy.Field()
+
+class StockItem(scrapy.Item):
+    name = scrapy.Field()
+    open_price = scrapy.Field()
+    previous_price = scrapy.Field()
+    price = scrapy.Field()
